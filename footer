@@ -1,0 +1,10 @@
+  <footer> 
+
+        <p class="footer-derechos"> Todos los derechos reservados</p>
+        /*<div class="footer-container-flex">
+          <a href="link" target="blank">
+            <img class="logotipofooter"
+          src="imagen"
+          alt="logotipo instagram"
+        />
+       /*

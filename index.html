@@ -1,114 +1,140 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyecto Pet Shop</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary w-100 position-fixed top-0 z-3">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">
+      <img class="logotipo" src="images/logo.webp" alt="Logotipo Pet Shop" />
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./pages/Gatos.html" >gatos </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Perros</a>
+           <li class="nav-item">
+          <a class="nav-link" href="#">Farmacia</a>
+            <li class="nav-item">
+          <a class="nav-link" href="#">Agro</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <header class="index-header">
+      <div class="index-header-flex">
+      </div>
+     
+<section class="index-header-content px-3 h-100 d-flex justify-content-center align-items-center flex-column text-center">
+  <h1 class="index-h1">¡10% OFF EN TODA LA WEB!</h1>
+  <p class="index-parrafo-header">DEL 15 AL 31 DE JULIO</p>
+  <button class="btn-header">Ver más</button>
+</section>
+    </header>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=m , initial-scale=1.0">
-    <title>proyectopetshop</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
-
-<body>
-
-    <div class="grid-container">
-
-    <header class="index-header"> 
-       
-        <div class="index-header-flex">
-
-        <img class="logotipo" src="images/logo.webp" alt="Logotipo Pet Shop">
-
-        <nav class="navegacion-superior">
-            <ul>
-                <li><a href="index.html"> Inicio</a> </li>
-                <li><a href="./pages/perros.html"> Perros</a> </li>
-                <li><a href="./pages/gatos.ht
-                    ml"> Gatos</a> </li>
-                <li><a href="./pages/farmacia.html"> Farmacia</a> </li>
-                <li><a href="./pages/agro.html"> Agro</a> </li>
-            </ul>
-        </nav>
-        </div>
-
-    <section class="contenedor-inferior-header"
-
-        <h1 class="index-h1">¡Lo más buscado de Black Friday! </h1>
-        <p class="index-parrafo-header" > Armá tu carrito </p> 
-        <button class="btn-header">Ver más </button>
-    </section>
-
-</header>
-
-    
-    <main class="index-main">
-        <h2 class='descubri-todos-nuestros-productos-titulo'>Descubrí todos nuestros productos </h2>
-        
+    <main class="index-main px-3">
+      <h2 class="descubri-todos-nuestros-productos-titulo">Descubrí todos nuestros productos</h2>
       <section class="lo-mas-vendido-container">
- 
-        <section class="card-items"> 
-            <div class="grid-container">
-            <img src="./images/braveryperro.webp" alt="Bravery Perro adulto" />
-            <h3> Bravery perro adulto</h3>
-            <p class="card-items-precio"> <span> $1990 </span> $1790</p>
-            <p class="card-items-descripcion"> Lorem ipsum dolor sit amet.</p>
+        <div class="card-items">
+          <img src="images/braveryperro.webp" alt="Bravery perro adulto" />
+          <div class="card-items-content">
+            <h3 class="mt-2">Bravery perro adulto 2kg</h3>
+            <p class="card-items-precio"><span>$1990</span> $1790</p>
+            <p class="card-items-descripcion">Alimento perros adultosodas las razas.</p>
             <button class="card-items-btn">Comprar</button>
+          </div>
         </div>
-        </section>
-     
-        <section class="card-items"> 
-            <img class="card-items.images" src="./images/gemongato.webp" alt="Gemon gato adulto" />
-            <h3> Gemon gato adulto</h3>
-            <p class="card-items-precio"> <span> $2440 </span> $2249</p>
-              <p> Lorem ipsum dolor sit amet.</p>
-            <button class="card-items-btn">Comprar</button>
-        </section>
-    
-        <section class="card-items"> 
-            <img class="card-items.images" src="./images/farmacia.webp" alt="Farmacia" />
-            <h3> Antiparasitario Perros Simparica</h3>
-            <p class="card-items-precio"> <span> $1115 </span> $989</p>
-            <p> Lorem ipsum dolor sit amet.</p>
-          <button class="card-items-btn">Comprar</button>
-        </section> 
 
-        <section class="card-items"> 
-            <img src="./images/braveryperro.webp" alt="Bravery Perro adulto" />
-            <h3> Bravery perro adulto</h3>
-            <p class="card-items-precio"> <span> $1990 </span> $1790</p>
-            <p class="card-items-descripcion"> Lorem ipsum dolor sit amet.</p>
+        <div class="card-items">
+          <img src="images/gemongato.webp" alt="Gemon gato adulto" />
+          <div class="card-items-content">
+            <h3 class="mt-2">Gemon gato adulto 7kg</h3>
+            <p class="card-items-precio"><span>$2440</span> $2249</p>
+            <p class="card-items-descripcion">Ideal para gatos adultos exigentes.</p>
             <button class="card-items-btn">Comprar</button>
-        </section>
-    
-     
-        <section class="card-items"> 
-            <img class="card-items.images" src="./images/gemongato.webp" alt="Gemon gato adulto" />
-            <h3> Gemon gato adulto</h3>
-            <p class="card-items-precio"> <span> $2440 </span> $2249</p>
-              <p> Lorem ipsum dolor sit amet.</p>
+          </div>
+        </div>
+
+        <div class="card-items">
+          <img src="images/farmacia.webp" alt="Antiparasitario Perros Simparica" />
+          <div class="card-items-content">
+            <h3 class="mt-2">Antiparasitario Perros Simparica</h3>
+            <p class="card-items-precio"><span>$1115</span> $989</p>
+            <p class="card-items-descripcion">Actúa sobre parásitos externos.</p>
             <button class="card-items-btn">Comprar</button>
-        </section>
-    
-        <section class="card-items"> 
-            <img class="card-items.images" src="./images/farmacia.webp" alt="Farmacia" />
-            <h3> Antiparasitario Perros Simparica</h3>
-            <p class="card-items-precio"> <span> $1115 </span> $989</p>
-            <p> Lorem ipsum dolor sit amet.</p>
-          <button class="card-items-btn">Comprar</button>
-        </section> 
-        
+          </div>
+        </div>
+        <div class="card-items">
+          <img src="images/nyd.webp" alt="N&D Grain Free Adulto" />
+          <div class="card-items-content">
+            <h3 class="mt-2">N&D Grain Free Adulto  4kg</h3>
+            <p class="card-items-precio"><span>$3818</span> $3590</p>
+            <p class="card-items-descripcion">Alimento para perros premium sin granos.</p>
+            <button class="card-items-btn">Comprar</button>
+          </div>
+        </div>
+        <div class="card-items">
+          <img src="images/acana.webp" alt="Acana Cat First Feast" />
+          <div class="card-items-content">
+            <h3 class="mt-2">Acana Cat First Feast 2kg</h3>
+            <p class="card-items-precio"><span>$1752</span> $1619</p>
+            <p class="card-items-descripcion">Alimento protéico para gatos cachorros.</p>
+            <button class="card-items-btn">Comprar</button>
+          </div>
+        </div>
+        <div class="card-items">
+          <img src="images/alfombra.webp" alt="Alfombra para Arena Sanitaria" />
+          <div class="card-items-content">
+            <h3 class="mt-2">Alfombra para Arena Sanitaria</h3>
+            <p class="card-items-precio"><span>$795</span> $699</p>
+            <p class="card-items-descripcion">56x43cm, 100% lavable.</p>
+            <button class="card-items-btn">Comprar</button>
+          </div>
+        </div>
 
 
+      </section>
     </main>
 
-    <footer> 
-
-        <p class="footer-derechos"> Todos los derechos reservados</p>
-        
-        <div class="footer-container-flex"></div>
-      
- 
+    <footer class="footer p-3">
+      <div class="footer-container-grid">
+        <div class="footer-container-primerhijo">
+          <h4>Sobre nosotros</h4>
+          <p>Somos una tienda especializada en productos para mascotas, tanto alimentos como accesorios e higiene, entre otros.</p>
+        </div>
+        <div class="footer-container-segundohijo">
+          <h4>Medios de pago</h4>
+          <p>Aceptamos tarjetas, transferencias y pagos digitales.</p>
+        </div>
+        <div class="footer-container-tercerhijo">
+          <h4>Contacto</h4>
+          <p>Email: info@petshop.com<br>Tel: 099 123 456<br>Dirección: Talcahuano 3311</p>
+        </div>
+      </div>
+      <div class="footer-container-flex">
+        <p class="footer-derechos py-3 m-0">Todos los derechos reservados</p>
+        <img class="logotipo-footer" src="images/logo.webp" alt="Logotipo Footer" />
+      </div>
     </footer>
+      <img class="wpplogo position-fixed" src="/images/wpplogo.webp" alt="WhatsApp">
+    </div>
+    <img class="wpplogo" src="./images/wpplogo.webp" alt="WhatsApp">
 
-    <body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
+  </body>
 </html>

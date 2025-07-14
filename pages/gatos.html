@@ -1,11 +1,114 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Productos para Gatos | Pet Shop</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="../style.css" />
 </head>
 <body>
+<nav class="navbar navbar-expand-lg bg-body-tertiary w-100 position-fixed top-0 z-3">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="../index.html">
+      <img class="logotipo" src="../images/logo.webp" alt="Logotipo Pet Shop" />
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
     
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="gatos.html">Gatos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="perros.html">Perros</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="farmacia.html">Farmacia</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="agro.html">Agro</a>
+        </li>
+      </ul>
+      
+  
+    </div>
+  </div>
+</nav>
+
+<header class="gatos-header">
+  <div class="gatos-header-content">
+    <section class="gatos-header-contenedor-inferior">
+      <h1 class="gatos-h1">Productos para Gatos</h1>
+      <p class="gatos-parrafo-header">Alimentos, juguetes e higiene pensados para tu felino</p>
+      <button class="gatos-btn-header">Ver más</button>
+    </section>
+  </div>
+</header>
+
+  <main class="gatos-main">
+    <h2 class="gatos-productos-titulo">Alimentos y Accesorios</h2>
+    <section class="gatos-cards-container">
+      <div class="gatos-card">
+        <img src="../images/gemongato.webp" alt="Gemon gato adulto" />
+        <div class="gatos-card-content">
+          <h3>Gemon Gato Adulto</h3>
+          <p class="gatos-precio"><span>$2440</span> $2249</p>
+          <p class="gatos-descripcion">Alimento balanceado para gatos adultos exigentes.</p>
+          <button class="gatos-btn">Comprar</button>
+        </div>
+      </div>
+
+      <div class="gatos-card">
+        <img src="../images/arena.webp" alt="Arena Sanitaria" />
+        <div class="gatos-card-content">
+          <h3>Arena Sanitaria 8kg</h3>
+          <p class="gatos-precio"><span>$890</span> $749</p>
+          <p class="gatos-descripcion">Arena de alta absorción y bajo polvo para gatos.</p>
+          <button class="gatos-btn">Comprar</button>
+        </div>
+      </div>
+
+      <div class="gatos-card">
+        <img src="../images/juguete.webp" alt="Juguete interactivo para gato" />
+        <div class="gatos-card-content">
+          <h3>Juguete Interactivo</h3>
+          <p class="gatos-precio"><span>$640</span> $590</p>
+          <p class="gatos-descripcion">Estimula el juego y el ejercicio de tu gato.</p>
+          <button class="gatos-btn">Comprar</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container-grid">
+      <div class="footer-container-primerhijo">
+        <h4>Sobre nosotros</h4>
+        <p>Somos una tienda especializada en productos para mascotas, tanto alimentos como accesorios e higiene, entre otros.</p>
+      </div>
+      <div class="footer-container-segundohijo">
+        <h4>Medios de pago</h4>
+        <p>Aceptamos tarjetas, transferencias y pagos digitales.</p>
+      </div>
+      <div class="footer-container-tercerhijo">
+        <h4>Contacto</h4>
+        <p>Email: info@petshop.com<br>Tel: 099 123 456<br>Dirección: Talcahuano 3311</p>
+      </div>
+    </div>
+    <div class="footer-container-flex">
+      <p class="footer-derechos">Todos los derechos reservados</p>
+      <img class="logotipo-footer" src="../images/logo.webp" alt="Logotipo Footer" />
+    </div>
+  </footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>

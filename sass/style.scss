@@ -1,28 +1,36 @@
-.flexBasico, .gatos-header-content,
-.index-header-content, ul {
+//Variables
+
+$backgroundOscurecerFondo: rgba(0, 0, 0, 0.565);
+$colorBlanco: #ffffff;
+$colorNegro: #000000;
+
+//Extend 
+
+.flexBasico{
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: center; 
+  align-items: center;         
 }
 
-.paginasHeader, .index-header {
+.paginasHeader{
   display: flex;
   flex-direction: column;
   width: 100%;
   gap: 2rem;
   padding: 2rem;
-  background-image: url("../images/background.webp"); /* <-- ruta corregida */
+  background-image: url('../images/background.webp'); /* <-- ruta corregida */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
-  color: #ffffff;
+  color: $colorBlanco;
   z-index: 1;
   padding: 0;
   position: relative;
   min-height: 50vh;
   margin-top: 80px;
 }
+
 
 * {
   font-family: "Open Sans", sans-serif;
@@ -37,18 +45,19 @@ html, body {
 }
 
 body {
-  padding-top: 60px;
+  padding-top: 60px;  
 }
 
 ul {
   list-style: none;
+@extend .flexBasico;
   gap: 2rem;
   padding: 0;
   margin: 0;
 }
 
-.oscurecer-fondo, .oscurecer-fondo-gatos {
-  background-color: rgba(0, 0, 0, 0.565);
+.oscurecer-fondo,.oscurecer-fondo-gatos {
+    background-color: $backgroundOscurecerFondo
 }
 
 .wpplogo {
@@ -62,14 +71,22 @@ ul {
 }
 
 /* HEADER */
+
+.index-header {
+@extend .paginasHeader;
+}
+
 .index-h1 {
   font-weight: 600;
   font-size: 1.5rem;
 }
 
+
+
 .gatos-header-content,
 .index-header-content {
-  flex-direction: column;
+ @extend .flexBasico;
+  flex-direction: column; 
   text-align: center;
   height: 100%;
   width: 100%;
@@ -98,7 +115,7 @@ ul {
 
 .navegacion-superior ul li a,
 .gatos-navegacion-superior ul li a {
-  color: #ffffff;
+  color:$colorBlanco;
   text-decoration: none;
   font-weight: 600;
   font-size: 2rem;
@@ -124,13 +141,13 @@ ul {
   align-items: center;
   margin: 0 auto;
   padding: 0 1rem;
-  color: #ffffff;
+  color: $colorBlanco;
   text-align: center;
 }
 
 .index-parrafo-header,
 .gatos-parrafo-header {
-  color: #ffffff;
+  color: $colorBlanco;
   font-size: 1rem;
   text-align: center;
   width: 100%;
@@ -140,9 +157,9 @@ ul {
 .btn-header,
 .gatos-btn-header {
   width: 15rem;
-  background-color: rgba(255, 255, 255, 0.3607843137);
-  border: 2px solid #ffffff;
-  color: #ffffff;
+  background-color: #ffffff5c;
+  border: 2px solid $colorBlanco;
+  color: $colorBlanco;
   font-weight: 700;
   font-size: 1.2rem;
   padding: 1rem;
@@ -151,10 +168,11 @@ ul {
 }
 
 .gatos-btn-header {
-  background-color: rgba(0, 0, 0, 0.4705882353);
+  background-color: #00000078;
 }
 
 /* MAIN INDEX */
+
 .index-main {
   margin: 2rem 0;
   width: 100%;
@@ -225,7 +243,7 @@ ul {
 
 .card-items-precio span {
   text-decoration: line-through;
-  color: #000000;
+  color: $colorNegro;
   margin-right: 0.5rem;
 }
 
@@ -239,7 +257,7 @@ ul {
   background-color: rgb(46, 99, 46);
   border: none;
   padding: 0.75rem;
-  color: #ffffff;
+  color: $colorBlanco;
   font-weight: 600;
   text-transform: uppercase;
   cursor: pointer;
@@ -254,6 +272,7 @@ ul {
 }
 
 /* MAIN GATOS */
+
 .gatos-main {
   margin: 2rem 0;
   width: 100%;
@@ -324,7 +343,7 @@ ul {
 
 .gatos-precio span {
   text-decoration: line-through;
-  color: #000000;
+  color: $colorNegro;
   margin-right: 0.5rem;
 }
 
@@ -338,7 +357,7 @@ ul {
   background-color: rgb(46, 99, 46);
   border: none;
   padding: 0.75rem;
-  color: #ffffff;
+  color: $colorBlanco;
   font-weight: 600;
   text-transform: uppercase;
   cursor: pointer;
@@ -353,8 +372,9 @@ ul {
 }
 
 /* FOOTER */
+
 .footer {
-  background-color: #ffffff;
+  background-color: $colorBlanco;
   padding: 3rem 2rem;
   display: flex;
   flex-direction: column;
@@ -364,7 +384,7 @@ ul {
 }
 
 .footer-derechos {
-  color: #000000;
+  color: $colorNegro;
   font-weight: 500;
   text-align: center;
 }
@@ -395,18 +415,19 @@ ul {
 }
 
 .footer-container-primerhijo {
-  grid-area: 1/1/2/4;
+  grid-area: 1 / 1 / 2 / 4;
 }
 
 .footer-container-segundohijo {
-  grid-area: 2/1/3/4;
+  grid-area: 2 / 1 / 3 / 4;
 }
 
 .footer-container-tercerhijo {
-  grid-area: 3/1/4/4;
+  grid-area: 3 / 1 / 4 / 4;
 }
 
 /* RESPONSIVE */
+
 /* Desktop - 3 cards */
 .card-items,
 .gatos-card {
@@ -421,6 +442,7 @@ ul {
     flex: 1 1 calc(50% - 1rem);
     max-width: calc(50% - 1rem);
   }
+
   .index-header {
     min-height: 30vh;
     padding: 1rem;
@@ -429,6 +451,7 @@ ul {
     font-size: 1.3rem;
   }
 }
+
 /* Mobile (menos de 768px) - 1 card */
 @media (max-width: 768px) {
   .card-items,
@@ -436,6 +459,7 @@ ul {
     flex: 1 1 100%;
     max-width: 100%;
   }
+
   .index-header {
     min-height: 25vh;
     padding: 0.5rem;
@@ -444,5 +468,3 @@ ul {
     font-size: 1.1rem;
   }
 }
-
-/*# sourceMappingURL=style.css.map */

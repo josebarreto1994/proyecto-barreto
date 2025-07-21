@@ -1,0 +1,17 @@
+/* Tablets (iPad y similares) - 2 cards */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .card-items,
+  .gatos-card {
+    flex: 1 1 calc(50% - 1rem);
+    max-width: calc(50% - 1rem);
+  }
+}
+
+/* Mobile (menos de 768px) - 2 cards */
+@media (max-width: 768px) {
+  .card-items,
+  .gatos-card {
+    flex: 1 1 calc(50% - 1rem) !important;
+    max-width: calc(50% - 1rem) !important;
+  }
+}

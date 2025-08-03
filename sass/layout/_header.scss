@@ -1,66 +1,186 @@
-.flexBasico, .gatos-header-content,
-.index-header-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+// ==========================
+// VARIABLES
+// ==========================
+$green: #2a7a2a;
+$green-light: rgba(0, 128, 0, 0.2);
+
+// ==========================
+// HEADER BACKGROUNDS POR PÁGINA
+// ==========================
+$header-bg-images: (
+  'index': '../images/background.webp',
+  'gatos': '../images/gatosbackground.webp',
+  'perros': '../images/perrosbackground.webp',
+  'farmacia': '../images/farmabackground.webp', 
+  'agro': '../images/agrobackground.webp',
+);
+
+@each $name, $url in $header-bg-images {
+  .pagina-#{$name} .#{$name}-header {
+    background-image: url(#{$url});
+  }
 }
 
-
+// ==========================
+// NAVBAR FIJA Y RESPONSIVE
+// ==========================
 .navbar {
   position: fixed;
   top: 0;
-  width: 100%;
-  z-index: 1000;
-  background-color: #fff;
-  height: 140px;
+  left: 0;
+  width: 100vw;
+  z-index: 1040;
+  background: #fff;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.06);
+
+  .container-fluid {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 0 16px;
+  }
+
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    img.logotipo {
+      height: 90px;
+      width: auto;
+      transition: height 0.3s;
+    }
+  }
+
+  .navbar-toggler {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    border: none;
+    background: transparent;
+  }
 }
 
-.navbar .container-fluid {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+// --- DESKTOP ---
+@media (min-width: 992px) {
+  .navbar {
+    height: 140px !important;
+    min-height: 140px !important;
+    justify-content: centerx;
+  }
+  .navbar-brand img.logotipo {
+    height: 90px !important;
+    width: auto !important;
+  }
+  // Centra el menú horizontalmente en desktop, sin importar el tamaño del logo
+@media (min-width: 992px) {
+  .navbar .navbar-collapse {
+    justify-content: center !important;
+    display: flex !important;
+    position: relative !important;
+  }
+  .navbar-nav {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 !important;
+  }
 }
 
-.navbar-brand img.logotipo {
-  width: 120px;
-  height: auto;
 }
 
-.navbar-collapse {
-  flex-grow: 1;
-  align-items: center;
-  background-color: rgba(255, 255, 255, 0.95);
-
+// --- TABLET/INTERMEDIO ---
+@media (min-width: 577px) and (max-width: 991.98px) {
+  .navbar {
+    height: 100px !important;
+    min-height: 100px !important;
+  }
+  .navbar .container-fluid {
+    height: 100%;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+  .navbar-brand img.logotipo {
+    height: 72px !important;
+    width: auto !important;
+  }
+  .navbar-toggler {
+    height: 56px !important;
+    width: 56px !important;
+  }
 }
 
-.navbar-collapse.show {
-  background-color: rgba(255, 255, 255, 0.95); 
-  padding: 1rem;
-  border-radius: 0 0 8px 8px; 
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
- 
-}
-
-.navbar-collapse.collapse:not(.show) {
-  background-color: transparent;
+// --- MOBILE ---
+@media (max-width: 576px) {
+  .navbar {
+    height: 72px !important;
+    min-height: 72px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .navbar .container-fluid {
+    height: 100%;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+  .navbar-brand img.logotipo {
+    height: 50px !important;
+    width: auto !important;
+  }
+  .navbar-toggler {
+    height: 48px !important;
+    width: 48px !important;
+  }
 }
 
 @media (min-width: 992px) {
+  .navbar {
+    position: relative;
+  }
   .navbar-collapse {
     justify-content: center !important;
+    display: flex !important;
+    position: static !important;
+    width: 100%;
   }
-
   .navbar-nav {
-    flex-direction: row;
-    gap: 2rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 !important;
+    width: max-content;
+  }
+  .navbar-brand {
+    position: relative;
+    z-index: 2;
   }
 }
 
+
+// ==========================
+// MENÚ HAMBURGUESA MOBILE
+// ==========================
 @media (max-width: 991.98px) {
   .navbar-collapse {
-    justify-content: center !important;
+    background: #fff;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.10);
+    border-bottom-left-radius: 14px;
+    border-bottom-right-radius: 14px;
+    padding: 1.5rem 0.5rem 1rem 0.5rem;
+    margin-top: 0;
+    width: 100vw !important;
+    left: 0 !important;
+    right: 0 !important;
+    min-width: 100vw !important;
   }
-
+  .navbar .container-fluid {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
   .navbar-nav {
     flex-direction: column;
     align-items: center;
@@ -68,48 +188,69 @@
     width: 100%;
     padding-left: 0;
   }
+}
 
-  .navbar-nav .nav-link {
-    text-align: center;
-    width: 100%;
-    font-size: 2.6rem;  
-    font-weight: 600;
-    color: #333;
-    padding: 0.5rem 1rem;
+@media (min-width: 992px) {
+  .navbar-collapse {
+    background: transparent;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+    margin-top: 0;
+    width: auto !important;
+    min-width: auto !important;
+  }
+  .navbar-nav {
+    flex-direction: row;
+    gap: 2rem;
   }
 }
 
-
-.navbar-nav .nav-link:hover {
-  color: rgb(0, 128, 0);
-
-}
-
+// ==========================
+// HEADER HERO DEJA ESPACIO SEGÚN LA BARRA
+// ==========================
+.index-header,
 .gatos-header,
-.index-header {
+.perros-header,
+.farmacia-header,
+.agro-header {
+  padding-top: 200px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  min-height: 70vh;
-  padding-top: 80px;
-  margin-top: 0;
-  background-image: url("../images/background.webp");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  min-height: 40vh;
   position: relative;
-  color: #ffffff;
+  color: #fff;
   width: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  @media (min-width: 577px) and (max-width: 991.98px) { padding-top: 100px; }
+  @media (max-width: 576px) { padding-top: 72px; }
 }
 
-.index-h1 {
-  font-weight: 600;
-  font-size: 1.5rem;
-}
+@media (min-width: 992px) {
+  .index-header,
+  .gatos-header,
+  .perros-header,
+  .farmacia-header,
+  .agro-header {
+    background-position: center  !important;
+    min-height: 430px;
+    max-height: 480px;
+  }}
 
+
+
+// ==========================
+// HEADER CONTENT CENTRADO
+// ==========================
+.index-header-content,
 .gatos-header-content,
-.index-header-content {
+.perros-header-content,
+.farmacia-header-content,
+.agro-header-content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -121,103 +262,116 @@
   margin: 0 auto;
 }
 
-.index-header-flex,
-.gatos-header-flex {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-}
-
-.logotipo,
-.gatos-logotipo {
-  width: 250px;
-  height: auto;
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 0.5rem;
-  border-radius: 160px;
-}
-
-.navegacion-superior ul li a,
-.gatos-navegacion-superior ul li a {
-  color: #ffffff;
-  text-decoration: none;
+// ==========================
+// HEADER HERO TEXTOS Y BOTÓN
+// ==========================
+.index-header-content h1,
+.gatos-header-content h1,
+.perros-header-content h1,
+.farmacia-header-content h1,
+.agro-header-content h1 {
   font-weight: 600;
-  font-size: 5rem;
-  letter-spacing: 0.5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-}
-
-.navegacion-superior,
-.gatos-navegacion-superior {
-  display: flex;
-  justify-content: center;
-  width: 80%;
-}
-
-.contenedor-inferior-header,
-.gatos-header-contenedor-inferior {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  padding: 0 1rem;
-  color: #ffffff;
-  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 8px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
 .index-parrafo-header,
-.gatos-parrafo-header {
-  color: #ffffff;
-  font-size: 1rem;
-  text-align: center;
-  width: 100%;
-  margin: 0;
+.gatos-parrafo-header,
+.perros-parrafo-header,
+.farmacia-parrafo-header,
+.agro-parrafo-header {
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-bottom: 16px;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.13);
 }
 
 .btn-header,
-.gatos-btn-header {
+.gatos-btn-header,
+.perros-btn-header,
+.farmacia-btn-header,
+.agro-btn-header {
   width: 15rem;
-  background-color: rgba(255, 255, 255, 0.36);
-  border: 2px solid #ffffff;
-  color: #ffffff;
+  background-color: rgba(255,255,255,0.36);
+  border: 2px solid #fff;
+  color: #fff;
   font-weight: 700;
   font-size: 1.2rem;
   padding: 1rem;
   cursor: pointer;
   margin-top: 1rem;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
 }
 
 .btn-header:hover,
-.gatos-btn-header:hover {
-  background-color: rgba(255, 255, 255, 0.55);
+.gatos-btn-header:hover,
+.perros-btn-header:hover,
+.farmacia-btn-header:hover,
+.agro-btn-header:hover {
+  background-color: rgb(46, 89, 46) !important;
+  color: #fff !important;
+  border-color: rgb(46, 89, 46) !important;
+  outline: none !important;
 }
-
-.gatos-btn-header {
-  background-color: rgba(0, 0, 0, 0.47);
-  border-color: #ffffff;
+.nav-link:hover,
+.nav-link.active {
+  background-color: $green-light;
+  color: $green !important;
+  border-radius: 6px;
 }
-
-.gatos-btn-header:hover {
-  background-color: rgba(0, 0, 0, 0.65);
-}
-
-.navbar-nav .nav-link {
-  font-size: 1.4rem !important;
-  font-weight: 600 !important;
-  color: #333 !important;
-  padding: 0.5rem 1rem !important;
-}
-
-@media (max-width: 991.98px) {
-  .navbar-nav .nav-link {
-    font-size: 1.8rem !important;
-    text-align: center !important;
-    width: 100% !important;
+@media (min-width: 992px) {
+  .navbar-toggler {
+    display: none !important;
   }
+}
+
+
+
+.index-header,
+.gatos-header,
+.perros-header,
+.farmacia-header,
+.agro-header {
+  position: relative;
+  overflow: hidden;
+}
+.index-header::before,
+.gatos-header::before,
+.perros-header::before,
+.farmacia-header::before,
+.agro-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.index-header-content,
+.gatos-header-content,
+.perros-header-content,
+.farmacia-header-content,
+.agro-header-content {
+  position: relative;
+  z-index: 2;
+}
+
+.index-header-content h1,
+.gatos-header-content h1,
+.perros-header-content h1,
+.farmacia-header-content h1,
+.agro-header-content h1,
+.index-parrafo-header,
+.gatos-parrafo-header,
+.perros-parrafo-header,
+.farmacia-parrafo-header,
+.agro-parrafo-header {
+  text-shadow: 0 2px 8px rgba(0,0,0,0.7), 0 1px 0 #000;
+}
+.card-items-btn {
+  text-decoration: none !important;
 }

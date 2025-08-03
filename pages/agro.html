@@ -3,26 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Agro - Pet Shop</title>
+  <title>Proyecto Pet Shop - Productos Agropecuarios</title>
+  <meta name="description" content="Productos agropecuarios de calidad en Proyecto Pet Shop. Fertilizantes, semillas, herramientas y más para el campo." />
+  <meta name="keywords" content="agro, agropecuario, fertilizantes, semillas, herramientas, campo, pet shop" />
+  <link rel="icon" type="image/png" href="../images/logo.webp">
+  <link rel="canonical" href="https://TUSITIO.com/pages/agro.html" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="../style/style.css" />
 </head>
-<body>
 
-<nav class="navbar navbar-expand-lg bg-body-tertiary w-100 position-fixed top-0 z-3">
+<body class="pagina-agro">
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary w-100 position-fixed top-0 z-3" role="navigation" aria-label="Menú principal de navegación">
   <div class="container-fluid">
     <a class="navbar-brand" href="../index.html">
       <img class="logotipo" src="../images/logo.webp" alt="Logotipo Pet Shop" />
     </a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
@@ -31,54 +28,128 @@
         <li class="nav-item"><a class="nav-link" href="gatos.html">Gatos</a></li>
         <li class="nav-item"><a class="nav-link" href="perros.html">Perros</a></li>
         <li class="nav-item"><a class="nav-link" href="farmacia.html">Farmacia</a></li>
-        <li class="nav-item"><a class="nav-link active" href="#">Agro</a></li>
+        <li class="nav-item"><a class="nav-link active" href="agro.html">Agro</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<header class="gatos-header">
-  <section class="gatos-header-content">
-    <h1 class="fw-semibold fs-3">Agro</h1>
-    <p class="gatos-parrafo-header">Productos para el campo y mascotas</p>
-    <button class="gatos-btn-header">Ver más</button>
+<header class="agro-header">
+  <section class="agro-header-content index-header-content">
+    <h1 class="fw-semibold fs-3">Productos Agro</h1>
+    <p class="agro-parrafo-header index-parrafo-header">Alimentos e insumos para animales de granja</p>
+    <button class="agro-btn-header btn-header" aria-label="Ver productos agropecuarios">Ver más</button>
   </section>
 </header>
 
-<div class="gatos-header-flex"></div>
-
 <main class="index-main px-3">
-  <h2 class="descubri-todos-nuestros-productos-titulo">Lo mejor para el agro</h2>
+  <h2 class="descubri-todos-nuestros-productos-titulo">Lo mejor para tu campo</h2>
   <section class="lo-mas-vendido-container">
 
     <div class="card-items">
-      <img src="../images/semillas.webp" alt="Semillas" />
+      <img src="../images/fertilizante.webp" alt="Fertilizante orgánico" />
       <div class="card-items-content">
-        <h3 class="mt-2">Semillas de pasto</h3>
-        <p class="card-items-precio"><span>$1200</span> $999</p>
-        <p class="card-items-descripcion">Semillas para siembra de pasto en campo y jardín.</p>
-        <button class="card-items-btn">Comprar</button>
+        <h3 class="mt-2">Fertilizante Orgánico</h3>
+        <p class="card-items-precio"><span>$1500</span> $1350</p>
+        <p class="card-items-descripcion">Mejora la calidad del suelo y el rendimiento de tus cultivos.</p>
+        <a class="card-items-btn"
+           href="https://wa.me/5491133344455?text=Hola,%20quiero%20comprar%20Fertilizante%20Org%C3%A1nico"
+           target="_blank"
+           rel="noopener"
+           aria-label="Comprar Fertilizante Orgánico por WhatsApp">
+          Comprar
+        </a>
       </div>
     </div>
 
     <div class="card-items">
-      <img src="../images/fertilizante.webp" alt="Fertilizante" />
+      <img src="../images/semillas.webp" alt="Semillas híbridas" />
       <div class="card-items-content">
-        <h3 class="mt-2">Fertilizante orgánico</h3>
-        <p class="card-items-precio"><span>$1500</span> $1350</p>
-        <p class="card-items-descripcion">Fertilizante natural para cultivo saludable.</p>
-        <button class="card-items-btn">Comprar</button>
+        <h3 class="mt-2">Semillas Híbridas</h3>
+        <p class="card-items-precio"><span>$800</span> $720</p>
+        <p class="card-items-descripcion">Alta germinación y resistencia para mejores cosechas.</p>
+        <a class="card-items-btn"
+           href="https://wa.me/5491133344455?text=Hola,%20quiero%20comprar%20Semillas%20H%C3%ADbridas"
+           target="_blank"
+           rel="noopener"
+           aria-label="Comprar Semillas Híbridas por WhatsApp">
+          Comprar
+        </a>
+      </div>
+    </div>
+
+    <div class="card-items">
+      <img src="../images/aspersor.webp" alt="Aspersor agrícola" />
+      <div class="card-items-content">
+        <h3 class="mt-2">Aspersor Agrícola</h3>
+        <p class="card-items-precio"><span>$3000</span> $2700</p>
+        <p class="card-items-descripcion">Riego eficiente para grandes extensiones de cultivo.</p>
+        <a class="card-items-btn"
+           href="https://wa.me/5491133344455?text=Hola,%20quiero%20comprar%20Aspersor%20Agr%C3%ADcola"
+           target="_blank"
+           rel="noopener"
+           aria-label="Comprar Aspersor Agrícola por WhatsApp">
+          Comprar
+        </a>
+      </div>
+    </div>
+
+    <div class="card-items">
+      <img src="../images/minitractor.webp" alt="Mini tractor" />
+      <div class="card-items-content">
+        <h3 class="mt-2">Mini Tractor</h3>
+        <p class="card-items-precio"><span>$35000</span> $32000</p>
+        <p class="card-items-descripcion">Potencia y maniobrabilidad para tareas agrícolas.</p>
+        <a class="card-items-btn"
+           href="https://wa.me/5491133344455?text=Hola,%20quiero%20comprar%20Mini%20Tractor"
+           target="_blank"
+           rel="noopener"
+           aria-label="Comprar Mini Tractor por WhatsApp">
+          Comprar
+        </a>
+      </div>
+    </div>
+
+    <div class="card-items">
+      <img src="../images/guantes.webp" alt="Guantes de trabajo" />
+      <div class="card-items-content">
+        <h3 class="mt-2">Guantes de Trabajo</h3>
+        <p class="card-items-precio"><span>$250</span> $225</p>
+        <p class="card-items-descripcion">Protección y comodidad para tus manos en el campo.</p>
+        <a class="card-items-btn"
+           href="https://wa.me/5491133344455?text=Hola,%20quiero%20comprar%20Guantes%20de%20Trabajo"
+           target="_blank"
+           rel="noopener"
+           aria-label="Comprar Guantes de Trabajo por WhatsApp">
+          Comprar
+        </a>
+      </div>
+    </div>
+
+    <div class="card-items">
+      <img src="../images/manguera.webp" alt="Manguera reforzada" />
+      <div class="card-items-content">
+        <h3 class="mt-2">Manguera Reforzada</h3>
+        <p class="card-items-precio"><span>$1800</span> $1620</p>
+        <p class="card-items-descripcion">Durabilidad y resistencia para riego y limpieza.</p>
+        <a class="card-items-btn"
+           href="https://wa.me/5491133344455?text=Hola,%20quiero%20comprar%20Manguera%20Reforzada"
+           target="_blank"
+           rel="noopener"
+           aria-label="Comprar Manguera Reforzada por WhatsApp">
+          Comprar
+        </a>
       </div>
     </div>
 
   </section>
 </main>
 
-<footer class="footer">
+<footer class="footer" role="contentinfo" aria-label="Información de contacto y medios de pago">
   <div class="footer-container-grid">
     <div class="footer-section">
       <h4>Sobre nosotros</h4>
-      <p>Somos una tienda especializada en productos para mascotas.</p>
+      <p>Somos una tienda especializada en productos para mascotas y agro.</p>
     </div>
     <div class="footer-section">
       <h4>Medios de pago</h4>
@@ -93,9 +164,8 @@
   <div class="footer-bottom">
     <p class="footer-derechos">Todos los derechos reservados</p>
     <img class="logotipo-footer" src="../images/logo.webp" alt="Logotipo Footer" />
+    <img class="wpplogo" src="../images/wpplogo.webp" alt="Logo WhatsApp" />
   </div>
-
-  <img class="wpplogo" src="../images/wpplogo.webp" alt="WhatsApp" />
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>

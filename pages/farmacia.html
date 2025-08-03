@@ -3,26 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Farmacia Veterinaria - Pet Shop</title>
+  <title>Proyecto Pet Shop - Farmacia</title>
+  <meta name="description" content="Encuentra medicamentos y productos de salud para tus mascotas en Proyecto Pet Shop." />
+  <meta name="keywords" content="farmacia, mascotas, medicamentos, salud animal, antipulgas, vitaminas, pet shop" />
+  <link rel="icon" type="image/png" href="../images/logo.webp">
+  <link rel="canonical" href="https://TUSITIO.com/pages/farmacia.html" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="../style/style.css" />
 </head>
-<body>
 
-<nav class="navbar navbar-expand-lg bg-body-tertiary w-100 position-fixed top-0 z-3">
+<body class="pagina-farmacia">
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary w-100 position-fixed top-0 z-3" role="navigation" aria-label="Menú principal de navegación">
   <div class="container-fluid">
     <a class="navbar-brand" href="../index.html">
       <img class="logotipo" src="../images/logo.webp" alt="Logotipo Pet Shop" />
     </a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
@@ -30,55 +27,129 @@
         <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
         <li class="nav-item"><a class="nav-link" href="gatos.html">Gatos</a></li>
         <li class="nav-item"><a class="nav-link" href="perros.html">Perros</a></li>
-        <li class="nav-item"><a class="nav-link active" href="#">Farmacia</a></li>
+        <li class="nav-item"><a class="nav-link active" href="farmacia.html">Farmacia</a></li>
         <li class="nav-item"><a class="nav-link" href="agro.html">Agro</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<header class="gatos-header">
-  <section class="gatos-header-content">
-    <h1 class="fw-semibold fs-3">Farmacia Veterinaria</h1>
-    <p class="gatos-parrafo-header">Cuidá la salud de tu mascota</p>
-    <button class="gatos-btn-header">Ver más</button>
+<header class="farmacia-header">
+  <section class="farmacia-header-content index-header-content">
+    <h1 class="fw-semibold fs-3">Productos de Farmacia</h1>
+    <p class="farmacia-parrafo-header index-parrafo-header">Medicamentos y suplementos para tus mascotas</p>
+    <button class="btn-header farmacia-btn-header" aria-label="Ver productos de farmacia">Ver más</button>
   </section>
 </header>
 
-<div class="gatos-header-flex"></div>
-
 <main class="index-main px-3">
-  <h2 class="descubri-todos-nuestros-productos-titulo">Medicamentos y antiparasitarios</h2>
+  <h2 class="descubri-todos-nuestros-productos-titulo">Salud y bienestar para tus mascotas</h2>
   <section class="lo-mas-vendido-container">
 
     <div class="card-items">
-      <img src="../images/antiparasitario.webp" alt="Antiparasitario Perros Simparica" />
+      <img src="../images/antipulgas.webp" alt="Antipulgas" />
       <div class="card-items-content">
-        <h3 class="mt-2">Antiparasitario Perros Simparica</h3>
-        <p class="card-items-precio"><span>$1115</span> $989</p>
-        <p class="card-items-descripcion">Actúa sobre parásitos externos.</p>
-        <button class="card-items-btn">Comprar</button>
+        <h3 class="mt-2">Antipulgas Spot-On</h3>
+        <p class="card-items-precio"><span>$1200</span> $1099</p>
+        <p class="card-items-descripcion">Protección efectiva contra pulgas y garrapatas.</p>
+        <a class="card-items-btn"
+           href="https://wa.me/5491133344455?text=Hola,%20quiero%20comprar%20Antipulgas%20Spot-On"
+           target="_blank"
+           rel="noopener"
+           aria-label="Comprar Antipulgas Spot-On por WhatsApp">
+          Comprar
+        </a>
       </div>
     </div>
 
     <div class="card-items">
-      <img src="../images/vacuna.webp" alt="Vacuna para mascotas" />
+      <img src="../images/vitaminas.webp" alt="Vitaminas para Mascotas" />
       <div class="card-items-content">
-        <h3 class="mt-2">Vacuna anual para mascotas</h3>
-        <p class="card-items-precio"><span>$2500</span> $2300</p>
-        <p class="card-items-descripcion">Protección completa contra enfermedades comunes.</p>
-        <button class="card-items-btn">Comprar</button>
+        <h3 class="mt-2">Vitaminas para Mascotas</h3>
+        <p class="card-items-precio"><span>$850</span> $799</p>
+        <p class="card-items-descripcion">Suplemento vitamínico para mejorar la salud.</p>
+        <a class="card-items-btn"
+           href="https://wa.me/5491133344455?text=Hola,%20quiero%20comprar%20Vitaminas%20para%20Mascotas"
+           target="_blank"
+           rel="noopener"
+           aria-label="Comprar Vitaminas para Mascotas por WhatsApp">
+          Comprar
+        </a>
+      </div>
+    </div>
+
+    <div class="card-items">
+      <img src="../images/antidiarreico.webp" alt="Antidiarreico" />
+      <div class="card-items-content">
+        <h3 class="mt-2">Antidiarreico</h3>
+        <p class="card-items-precio"><span>$950</span> $899</p>
+        <p class="card-items-descripcion">Alivio rápido para problemas digestivos.</p>
+        <a class="card-items-btn"
+           href="https://wa.me/5491133344455?text=Hola,%20quiero%20comprar%20Antidiarreico"
+           target="_blank"
+           rel="noopener"
+           aria-label="Comprar Antidiarreico por WhatsApp">
+          Comprar
+        </a>
+      </div>
+    </div>
+
+    <div class="card-items">
+      <img src="../images/repelente.webp" alt="Repelente de insectos" />
+      <div class="card-items-content">
+        <h3 class="mt-2">Repelente de insectos</h3>
+        <p class="card-items-precio"><span>$780</span> $740</p>
+        <p class="card-items-descripcion">Protección contra mosquitos y otros insectos.</p>
+        <a class="card-items-btn"
+           href="https://wa.me/5491133344455?text=Hola,%20quiero%20comprar%20Repelente%20de%20insectos"
+           target="_blank"
+           rel="noopener"
+           aria-label="Comprar Repelente de insectos por WhatsApp">
+          Comprar
+        </a>
+      </div>
+    </div>
+
+    <div class="card-items">
+      <img src="../images/cicatrizante.webp" alt="Gel cicatrizante" />
+      <div class="card-items-content">
+        <h3 class="mt-2">Gel Cicatrizante</h3>
+        <p class="card-items-precio"><span>$670</span> $629</p>
+        <p class="card-items-descripcion">Acelera la recuperación de heridas.</p>
+        <a class="card-items-btn"
+           href="https://wa.me/5491133344455?text=Hola,%20quiero%20comprar%20Gel%20Cicatrizante"
+           target="_blank"
+           rel="noopener"
+           aria-label="Comprar Gel Cicatrizante por WhatsApp">
+          Comprar
+        </a>
+      </div>
+    </div>
+
+    <div class="card-items">
+      <img src="../images/antibacteriano.webp" alt="Antibacteriano" />
+      <div class="card-items-content">
+        <h3 class="mt-2">Antibacteriano en spray</h3>
+        <p class="card-items-precio"><span>$980</span> $899</p>
+        <p class="card-items-descripcion">Previene infecciones en heridas y cortes.</p>
+        <a class="card-items-btn"
+           href="https://wa.me/5491133344455?text=Hola,%20quiero%20comprar%20Antibacteriano%20en%20spray"
+           target="_blank"
+           rel="noopener"
+           aria-label="Comprar Antibacteriano en spray por WhatsApp">
+          Comprar
+        </a>
       </div>
     </div>
 
   </section>
 </main>
 
-<footer class="footer">
+<footer class="footer" role="contentinfo" aria-label="Información de contacto y medios de pago">
   <div class="footer-container-grid">
     <div class="footer-section">
       <h4>Sobre nosotros</h4>
-      <p>Somos una tienda especializada en productos para mascotas.</p>
+      <p>Somos una tienda especializada en productos para mascotas, tanto alimentos como accesorios e higiene, entre otros.</p>
     </div>
     <div class="footer-section">
       <h4>Medios de pago</h4>
@@ -91,4 +162,12 @@
   </div>
 
   <div class="footer-bottom">
-    <
+    <p class="footer-derechos">Todos los derechos reservados</p>
+    <img class="logotipo-footer" src="../images/logo.webp" alt="Logotipo Footer" />
+    <img class="wpplogo" src="../images/wpplogo.webp" alt="Logo WhatsApp" />
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

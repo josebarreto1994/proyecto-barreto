@@ -1,34 +1,31 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
- <meta charset="UTF-8" />
- <meta name="viewport" content="width=device-width, initial-scale=1" />
- <title>Productos para Gatos - Pet Shop</title>
- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
- <link rel="stylesheet" href="../style/style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Proyecto Pet Shop - Productos para Gatos</title>
+  <meta name="description" content="Descubre nuestra amplia variedad de alimentos y accesorios para gatos. Calidad y buen precio en Proyecto Pet Shop.">
+  <meta name="keywords" content="gatos, productos para gatos, alimento, accesorios, arena, cama, rascador, pet shop" />
+  <link rel="icon" type="image/png" href="../images/logo.webp">
+  <link rel="canonical" href="https://TUSITIO.com/pages/gatos.html" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../style/style.css" />
 </head>
-<body>
 
-<nav class="navbar navbar-expand-lg bg-body-tertiary w-100 position-fixed top-0 z-3">
+<body class="pagina-gatos">
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary w-100 position-fixed top-0 z-3" role="navigation" aria-label="Menú principal de navegación">
   <div class="container-fluid">
     <a class="navbar-brand" href="../index.html">
       <img class="logotipo" src="../images/logo.webp" alt="Logotipo Pet Shop" />
     </a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
       <ul class="navbar-nav">
         <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
-        <li class="nav-item"><a class="nav-link active" href="#">Gatos</a></li>
+        <li class="nav-item"><a class="nav-link active" href="gatos.html">Gatos</a></li>
         <li class="nav-item"><a class="nav-link" href="perros.html">Perros</a></li>
         <li class="nav-item"><a class="nav-link" href="farmacia.html">Farmacia</a></li>
         <li class="nav-item"><a class="nav-link" href="agro.html">Agro</a></li>
@@ -37,46 +34,124 @@
   </div>
 </nav>
 
-
 <header class="gatos-header">
-  <section class="gatos-header-content">
+  <section class="gatos-header-content index-header-content">
     <h1 class="fw-semibold fs-3">Productos para Gatos</h1>
-    <p class="gatos-parrafo-header">Comida, higiene y más para tu gato</p>
-    <button class="gatos-btn-header">Ver más</button>
+    <p class="gatos-parrafo-header index-parrafo-header">Comida, higiene y más para tu gato</p>
+    <button class="gatos-btn-header btn-header" aria-label="Ver productos para gatos">Ver más</button>
   </section>
 </header>
-
-<div class="gatos-header-flex"></div>
 
 <main class="index-main px-3">
   <h2 class="descubri-todos-nuestros-productos-titulo">Lo mejor para tu gato</h2>
   <section class="lo-mas-vendido-container">
     <div class="card-items">
-      <img src="../images/gemongato.webp" alt="Gemon gato adulto" />
+      <img src="../images/gemongato.webp" alt="Gemon gato adulto 7kg" />
       <div class="card-items-content">
         <h3 class="mt-2">Gemon gato adulto 7kg</h3>
         <p class="card-items-precio"><span>$2440</span> $2249</p>
         <p class="card-items-descripcion">Ideal para gatos adultos exigentes.</p>
-        <button class="card-items-btn">Comprar</button>
+        <a class="card-items-btn"
+           href="https://wa.me/5491133344455?text=Hola,%20quiero%20comprar%20Gemon%20gato%20adulto%207kg"
+           target="_blank"
+           rel="noopener"
+           aria-label="Comprar Gemon gato adulto 7kg por WhatsApp">
+          Comprar
+        </a>
       </div>
     </div>
-    <!-- Podés copiar más bloques de .card-items como en el index -->
+
+    <div class="card-items">
+      <img src="../images/acana.webp" alt="Acana Cat First Feast 2kg" />
+      <div class="card-items-content">
+        <h3 class="mt-2">Acana Cat First Feast 2kg</h3>
+        <p class="card-items-precio"><span>$1752</span> $1619</p>
+        <p class="card-items-descripcion">Alimento protéico para gatos cachorros.</p>
+        <a class="card-items-btn"
+           href="https://wa.me/5491133344455?text=Hola,%20quiero%20comprar%20Acana%20Cat%20First%20Feast%202kg"
+           target="_blank"
+           rel="noopener"
+           aria-label="Comprar Acana Cat First Feast 2kg por WhatsApp">
+          Comprar
+        </a>
+      </div>
+    </div>
+
+    <div class="card-items">
+      <img src="../images/arena.webp" alt="Arena para Gatos" />
+      <div class="card-items-content">
+        <h3 class="mt-2">Arena para Gatos 5kg</h3>
+        <p class="card-items-precio"><span>$850</span> $799</p>
+        <p class="card-items-descripcion">Absorbente y sin polvo.</p>
+        <a class="card-items-btn"
+           href="https://wa.me/5491133344455?text=Hola,%20quiero%20comprar%20Arena%20para%20Gatos%205kg"
+           target="_blank"
+           rel="noopener"
+           aria-label="Comprar Arena para Gatos 5kg por WhatsApp">
+          Comprar
+        </a>
+      </div>
+    </div>
+
+    <div class="card-items">
+      <img src="../images/juguetegato.webp" alt="Juguete para Gatos" />
+      <div class="card-items-content">
+        <h3 class="mt-2">Juguete Interactivo para Gatos</h3>
+        <p class="card-items-precio"><span>$190</span> $150</p>
+        <p class="card-items-descripcion">Diversión asegurada para tu felino.</p>
+        <a class="card-items-btn"
+           href="https://wa.me/5491133344455?text=Hola,%20quiero%20comprar%20Juguete%20Interactivo%20para%20Gatos"
+           target="_blank"
+           rel="noopener"
+           aria-label="Comprar Juguete Interactivo para Gatos por WhatsApp">
+          Comprar
+        </a>
+      </div>
+    </div>
+
+    <div class="card-items">
+      <img src="../images/camagato.webp" alt="Cama para Gatos" />
+      <div class="card-items-content">
+        <h3 class="mt-2">Cama para Gatos</h3>
+        <p class="card-items-precio"><span>$1290</span> $1199</p>
+        <p class="card-items-descripcion">Cómoda y fácil de lavar.</p>
+        <a class="card-items-btn"
+           href="https://wa.me/5491133344455?text=Hola,%20quiero%20comprar%20Cama%20para%20Gatos"
+           target="_blank"
+           rel="noopener"
+           aria-label="Comprar Cama para Gatos por WhatsApp">
+          Comprar
+        </a>
+      </div>
+    </div>
+
+    <div class="card-items">
+      <img src="../images/rascadorgato.webp" alt="Rascador para Gatos" />
+      <div class="card-items-content">
+        <h3 class="mt-2">Rascador para Gatos</h3>
+        <p class="card-items-precio"><span>$1790</span> $1649</p>
+        <p class="card-items-descripcion">Mantiene las uñas sanas y tus muebles protegidos.</p>
+        <a class="card-items-btn"
+           href="https://wa.me/5491133344455?text=Hola,%20quiero%20comprar%20Rascador%20para%20Gatos"
+           target="_blank"
+           rel="noopener"
+           aria-label="Comprar Rascador para Gatos por WhatsApp">
+          Comprar
+        </a>
+      </div>
+    </div>
   </section>
 </main>
 
-<footer class="footer">
+<footer class="footer" role="contentinfo" aria-label="Información de contacto y medios de pago">
   <div class="footer-container-grid">
     <div class="footer-section">
       <h4>Sobre nosotros</h4>
-      <p>
-        Somos una tienda especializada en productos para mascotas, tanto alimentos como accesorios e higiene, entre otros.
-      </p>
+      <p>Somos una tienda especializada en productos para mascotas, tanto alimentos como accesorios e higiene, entre otros.</p>
     </div>
     <div class="footer-section">
       <h4>Medios de pago</h4>
-      <p>
-        Aceptamos tarjetas, transferencias y pagos digitales.
-      </p>
+      <p>Aceptamos tarjetas, transferencias y pagos digitales.</p>
     </div>
     <div class="footer-section">
       <h4>Contacto</h4>
@@ -91,11 +166,29 @@
   <div class="footer-bottom">
     <p class="footer-derechos">Todos los derechos reservados</p>
     <img class="logotipo-footer" src="../images/logo.webp" alt="Logotipo Footer" />
+    <img class="wpplogo" src="../images/wpplogo.webp" alt="Logo WhatsApp" />
   </div>
-
-  <img class="wpplogo" src="../images/wpplogo.webp" alt="WhatsApp">
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Navbar efecto al hacer scroll
+  window.addEventListener('scroll', () => {
+    const navbar = document.querySelector('.navbar');
+    navbar.classList.toggle('scrolled', window.scrollY > 50);
+  });
+
+  // Cierra el menú colapsado al hacer click en un link
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      const navbarCollapse = document.querySelector('.navbar-collapse');
+      if (navbarCollapse.classList.contains('show')) {
+        const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+          toggle: true
+        });
+      }
+    });
+  });
+</script>
 </body>
 </html>

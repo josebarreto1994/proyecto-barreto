@@ -5,21 +5,3 @@
 @use 'layout/header';
 @use 'layout/main';
 @use 'layout/footer';
-
-
-//Variables
-
-// $backgroundOscurecerFondo: rgba(0, 0, 0, 0.565);
-// $colorBlanco: #ffffff;
-
-//Extend 
-
-// .flexBasico{ 
-//   display: flex;
-//   justify-content: center; 
-//   align-items: center;         
-// }
-
-body {
-  padding-top: 80px;
-}
